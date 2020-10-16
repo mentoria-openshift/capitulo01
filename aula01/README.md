@@ -10,7 +10,10 @@ Existem diversas desvantagens nesta abordagem de software, que vão desde a impl
 ### E onde entram os containers?
 A alternativa para diminuir a chance de problemas como esses acontecerem é usar a abordagem containerizada. Containers são, de forma simples, sistemas operacionais diminuídos, rodando dentro de outro sistema operacional. São como VMs, apesar de não serem VMs exatamente. Oferecem alguns dos mesmos benefícios das VMs, como um espaço segregado para execução, segurança e isolamento de rede. Mas ele funciona diferente de uma VM: containers também são sistemas virtualizados, mas apenas a camada de SO é virtualizada, e não as demais. É algo mais superficial que a VM tradicional, pois os containers são tratados e manuseados como processos de sistema operacional, e interage diretamente com os recursos disponíveis e com processos de kernel para criar os ambientes, e isso impede que ele tenha acesso ao ambiente físico foram dele, o que difere das VMs tradicionais. Diferente das VMs tradicionais, containers não interagem com o hypervisor, então processos em execução no container tem interação somente com o kernel e com o sistema operacional hospedeiro, diferentemente das VMs tradicionais, que interagem diretamente com o hypervisor. A imagem 1.1 mostra com mais clareza a diferença entre a execução tradicional de aplicações e a execução em containers.
 
-(IMAGEM 1.1 VAI AQUI)
+<figure>
+  <img src="imagens/container-virtualmachine.png" alt="Imagem 1.1"/>
+  <figcaption>Imagem 1.1 - Aplicações clássicas e containerizadas</figcaption>
+</figure>
 
 ### Quais as vantagens de usar containers?
 #### Recursos diretos do OS hospedeiro
