@@ -4,11 +4,11 @@ Este repositório contém as aulas referentes ao primeiro capítulo da mentoria 
 # Tópicos
 ## Introdução a Containers
 1. [O que são containers?](aula01)
-2. [Entendendo o Dockerfile](aula02)
+2. Aula prática: [Entendendo o Dockerfile](aula02)
 3. [Linha de comando Docker](aula03)
-4. [Criando uma imagem Docker](aula04)
-5. [Criando templates com Docker Compose](aula05)
-6. [Criando aplicações multi-container com Docker](aula06)
+4. Aula prática: [Criando, visualizando e removendo imagens  e containers Docker](aula04)
+5. [Templates com Docker Compose](aula05)
+6. Aula prática: [Criando aplicações multi-container com Docker](aula06)
 
 # Capítulos
 1. [Containerização e Docker](https://github.com/mentoria-openshift/capitulo01)
