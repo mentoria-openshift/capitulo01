@@ -77,6 +77,8 @@ docker run -d --name nome -p 8080:8080 -e CHAVE=VALOR simplecrud:2.3
 
 Este comando cria um container a partir da imagem `simplecrud:2.3`. Mas temos uma série de switches para fornecer para o comando. O switch `-d` (que pode ser trocado por `--detach`) inicia o container e libera a linha de comando logo em seguida. Omitir este switch também cria o comando com sucesso, mas a linha de comando fica presa no stdout do container até que ele termine sua execução. O switch `--name` é autoexplicativo, e fornece um nome para o container. Ao listar os processos de container sendo executados, um nome aleatório é criado por padrão caso o container não tenha sido criado com esta opção. O switch `-p` (pode ser trocado por `--publish`) fornece portas a serem expostas e tuneladas para portas locais do hospedeiro. A porta do hospedeiro estando à esquerda, e a do container à direita. 
 
+Com o container de pé e com as portas mapeadas, podemos acessar a aplicação hospedada como se estivesse rodando na nossa máquina local. No exemplo fornecido nesta seção, sua aplicação estará rodando em `localhost:8080`.
+
 ## Executando comandos no container
 Ao executar o comando, você terá como saída o ID do container criado. Este ID é usado para identificar o container, e é especialmente útil quando existirem diversos containers com nomes parecidos. Uma vez que o container é criado, sua linha de comando fica acessível para uso. Usamos o comando `exec` para isso. 
 
