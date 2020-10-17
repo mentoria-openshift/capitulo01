@@ -19,17 +19,17 @@ Este passo a passo indica como chegar ao resultado final do exercício. Clique n
 <details> 
   <summary>1. Crie o arquivo Dockerfile e declare a imagem base.</summary>
    
-   ```bash
-    mkdir -p /pasta/de/trabalho/exercicio1/scripts
-    cd /pasta/de/trabalho/exercicio1
-    touch Dockerfile
-   ```
+```bash
+mkdir -p /pasta/de/trabalho/exercicio1/scripts
+cd /pasta/de/trabalho/exercicio1
+touch Dockerfile
+```
 
 Abra o Dockerfile com seu editor de texto favorito. O conteúdo do seu Dockerfile deverá ser o seguinte.
 
-   ```Dockerfile
-    FROM docker.io/maven:3.6.3-adoptopenjdk-11
-   ```
+```Dockerfile
+FROM docker.io/maven:3.6.3-adoptopenjdk-11
+```
 
 </details>
 
@@ -37,18 +37,18 @@ Abra o Dockerfile com seu editor de texto favorito. O conteúdo do seu Dockerfil
   <summary>2. Declare as variáveis de ambiente e os comandos necessários para clonar e compilar a aplicação.</summary>
   
 ```Dockerfile
-    ENV APP_PROFILE="default"
+ENV APP_PROFILE="default"
 
-    COPY [ "scripts/entrypoint.sh", "/entrypoint.sh" ]
+COPY [ "scripts/entrypoint.sh", "/entrypoint.sh" ]
 
-    RUN apt update -y
-    RUN apt install -y git
-    RUN mkdir /opt
-    RUN git clone https://github.com/thaalesalves/simplecrud-spring /opt/simplecrud
+RUN apt update -y
+RUN apt install -y git
+RUN mkdir /opt
+RUN git clone https://github.com/thaalesalves/simplecrud-spring /opt/simplecrud
 
-    WORKDIR /opt/simplecrud
+WORKDIR /opt/simplecrud
 
-    RUN mvn clean install
+RUN mvn clean install
 ```
 
 </details>
@@ -57,8 +57,8 @@ Abra o Dockerfile com seu editor de texto favorito. O conteúdo do seu Dockerfil
   <summary>3. Exponha a porta necessária e declare a execução da aplicação no entrypoint.</summary>
 
 ```Dockerfile
-    EXPOSE 8080
-    ENTRYPOINT [ "sh", "/entrypoint.sh" ]
+EXPOSE 8080
+ENTRYPOINT [ "sh", "/entrypoint.sh" ]
 ```
 
 </details>
