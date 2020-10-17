@@ -43,7 +43,6 @@ COPY [ "scripts/entrypoint.sh", "/entrypoint.sh" ]
 
 RUN apt update -y
 RUN apt install -y git
-RUN mkdir /opt
 RUN git clone https://github.com/thaalesalves/simplecrud-spring /opt/simplecrud
 
 WORKDIR /opt/simplecrud
@@ -75,7 +74,7 @@ Abra seu `entrypoint.sh` com seu editor de texto favorito.
 ```bash
 #!/bin/bash
 
-java -Dspring.profiles.active="$APP_PROFILE" -jar /opt/simplecrud-spring/target/simplecrud-0.0.1-SNAPSHOT.jar 
+java -Dspring.profiles.active="$APP_PROFILE" -jar /opt/simplecrud/target/simplecrud-0.0.1-SNAPSHOT.jar 
 ```
 
 </details>
@@ -84,24 +83,29 @@ java -Dspring.profiles.active="$APP_PROFILE" -jar /opt/simplecrud-spring/target/
   <summary>5. Compile a imagem.</summary>
    
 ```bash
-docker built -t simplecrud:1.0 .
+docker build -t simplecrud:1.0 .
 ```
 
 </details>
 
 <details> 
-  <summary>6. Crie um container a partir da imagem.</summary>
+  <summary>6. Crie um container a partir da imagem e acesse o shell dele.</summary>
    
 ```bash
-docker exec -it --name simplecrud -p 8080:8080 simplecrud:1.0
+# Criando um container
+docker run -d --name simplecrud -p 8080:8080 simplecrud:1.0
+
+# Para acessar o bash do container
+docker exec -it simplecrud bash
 ```
 
 </details>
 
 <details> 
-  <summary>7. Acesse o endpoint da aplicação e veja o JSON exibido.</summary>
+  <summary>7. Acesse o endpoint da aplicação e veja o JSON exibido duas vezes, uma pelo bash do container e outra localmente na sua máquina.</summary>
 
 ```bash
+# Execute o curl duas vezes:
 curl localhost:8080/api
 ```
 
