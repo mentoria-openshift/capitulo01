@@ -4,7 +4,20 @@
 # Aula 4 - Skopeo e Buildah
 Esta aula terá conteúdo prático, aplicando o que foi aprendido na anterior. Ao final desta aula, você saberá gerenciar suas imagens e containers usando o Buildah e o Skopeo.
 
-### Compilando com o Buildah
+## Podman, Buildah e Skopeo
+Já conhecemos o Podman, e nesta aula vamos conhecer o Buildah e o Skopeo. Por muito tempo, *container* e *Docker* significaram a mesma coisa, mas estas três ferramentas vieram para redefinir o mercado. 
+
+Em 2015, o Docker e o CoreOS se juntaram para criar a Open Container Initiative (OCI), uma iniciativa para padronizar a forma como containers funcionam, criar um runtime e um formato de imagens padrão. Hoje em dia, o formato OCI se tornou padrão quando o assunto é containers, e a maior parte dos repositórios famosos o usam - incluindo o Dockerhub. Com o nascimento e crescimento do Kubernetes, compra da CoreOS pela Red Hat e outras engines de container, o Docker perdeu espaço nesse mundo, abrindo alas para concorrentes. 
+
+O Podman, o Buildah e o Skopeo nasceram disso. São ferramentas de código aberto, mantidas pela comunidade, além de serem totalmente compatíveis com pods e imagens de formato OCI. 
+
+O Podman, por não precisar de acesso root e nem de um daemon, acabou ganhando muito espaço que pertencia ao Docker. E a total compatibilidade entre eles total o Podman uma ferramente muito útil. A flexibilidade e poder que o Buildah e o Skopeo oferecem para gerenciar imagens e containers também tiveram efeito na perda de espaço do Docker. Hoje em dia, essas três ferramentas juntas tornam o desenvolvedor mais ágil. 
+
+O OpenShift, construído a partir do código do Kubernetes, usou Docker como engine para criar e manter containers durante a maior parte da sua vida, até que em 2019, com a versão 4 do OpenShift, o Docker saiu dos bastidores da engine, e a partir daí, o Podman entrou em cena. A versão 3.11 do OpenShift foi a última a usar Docker como base, e todas as mais novas usam somente o Podman. 
+
+Pensando nesse avanço no mundo dos containers, e também nesta mudança que o OpenShift teve entre as versões, vamos explorar mais do que somente o Podman: vamos brincar com o Buildah e com o Skopeo também, e vamos ver por nós mesmos o poder que essas ferramentas oferecem.
+
+## Compilando com o Buildah
 O Buildah é uma ferramenta poderosa e flexível para compilação de imagens de container, e a grosso modo faz o mesmo que já aprendemos com o Docker e com o Podman: transformar um Dockerfile numa imagem completa. Mas o Buildah vai além: ele é capaz de executar comandos específicos de Dockerfile em linha de comando, inserir variáveis de ambiente em tempo de compilação.
 
 Bom, o mais simples de todos: compilar um Dockerfile com o Buildah. Não existe muita diversão nisso, já que o processo é basicamente o mesmo usando Podman ou Docker.
@@ -68,7 +81,7 @@ buildah commit $container_openjdk8 simplecrud:1.0
 
 Agora sim vimos o poder do Buildah. Leia a documentação no site oficial para saber mais sobre ele. Ao invés de usar um Dockerfile, você pode criar sua imagem com comandos executados diretamente no shell, e salvar esses comandos num script `.sh`. Quando este script for executado, o resultado será o mesmo de compilar um Dockerfile.
 
-### Gerenciando com o Skopeo
+## Gerenciando com o Skopeo
 O Skopeo é uma ferramenta adicional ao Podman, e serve para copiar imagens de um lugar a outro, inspecionar imagens, de forma altamente compatível. É possível usá-lo num repositório local, em repositórios externos, públicos, privados, com imagens OCI, imagens tar, Docker daemon... enfim, o Skopeo é poderosíssimo. 
 
 Podemos usá-lo para copiar uma imagem de um repositório para outro, subir imagens locais para um repositório remoto ou buscar informações sobre uma imagem. A vantagem de usar o Skopeo para isso é que não é necessário alterar a tag da imagem localmente para subi-la para um repositório. Para isso, usamos o comando `skopeo copy`.

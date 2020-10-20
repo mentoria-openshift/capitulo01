@@ -11,10 +11,7 @@ Além de criar e compilar imagens e executar containers a partir delas, temos ou
 
 Você pode também alterar o nome e a tag de imagens localmente para subi-las para um repositório, e manter a mesma imagem em diferentes repositórios. E existem formas diferentes de fazer isso, usando o Docker, o Podman ou o Skopeo. 
 
-### Gerenciando Imagens
-Além de compilar imagens e executar containers, podemos fazer outras coisas com os comandos padrão do Docker, que o Podman herdou. Vamos explorar alguns comandos.
-
-#### Listando imagens
+### Listando imagens
 Podemos listar as imagens que temos atualmente no nosso repositório local. 
 Nota: o Podman adiciona `localhost/` ao início das imagens locais, enquanto o Docker não. Não se preocupe, os comandos dos dois ainda são os mesmos.
 
@@ -82,7 +79,7 @@ podman images -q
 11f9dba4d1bc
 ```
 
-#### Renomeando e alterando tags
+### Renomeando e alterando tags
 Podemos renomear imagens e alterar tags localmente também. Para isso, usamos o comando `tag`. Ao executar este comando, uma nova imagem, idêntica à imagem fonte, é criada com uma tag nova, especificada pelo usuário.
 
 ```bash
@@ -101,7 +98,7 @@ localhost/ubi                        8       11f9dba4d1bc  13 months ago  216 MB
 
 Note que a imagem `localhost/ubi:8` foi criada a partir da `registry.access.redhat.com/ubi8:8.0`. Estas duas imagens são idênticas, mas com nomes diferentes. 
 
-#### Subindo e baixando imagens de um repositório
+### Subindo e baixando imagens de um repositório
 Assim como no git, nosso repositório local pode ser usado como base para subir e baixar imagens. Por exemplo, podemos baixar a imagem `centos:8` do Dockerhub sem usar um Dockerfile. Podemos, inclusive, mudar a sua tag e em seguida subi-la para nosso próprio repositório. Mas, para isso, precisamos estar autenticados. Repositórios públicos permitem que qualquer um baixe imagens dele, mas precisamos de um usuário autenticado para subir imagens.
 
 ```bash
