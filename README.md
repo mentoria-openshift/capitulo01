@@ -10,6 +10,12 @@ Este repositório contém as aulas referentes ao primeiro capítulo da mentoria 
 5. [Templates com Docker Compose](aula05)
 6. Aula prática: [Criando aplicações multi-container com Docker](aula06)
 
+# Apêndices
+* [Criando uma conta no Dockerhub](apendices/conta_dockerhub.md)
+* [Criando uma conta no Quay](apendices/conta_quay.md)
+* [Instalação do Docker](apendices/instalacao_docker.md) (Windows, Linux e macOS)
+* [Instalação das ferramentas de container](apendices/instalacao_container_tools.md) (somente Linux)
+
 # Capítulos
 1. [Containerização e Docker](https://github.com/mentoria-openshift/capitulo01)
 2. [Introdução ao OpenShift](https://github.com/mentoria-openshift/capitulo02)
