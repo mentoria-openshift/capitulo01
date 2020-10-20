@@ -1,3 +1,6 @@
+<p align="center"><a href="../aula01">Aula 1</a> | <a href="../aula02">Aula 2</a></p>
+<br/>
+
 # Exercício prático - Aulas 1 e 2
 
 Com o conteúdo que aprendemos neste capítulo, podemos criar uma imagem de container simples para subi-la e executar sua aplicação. Ao final deste exercício, você saberá criar uma imagem de container e executa-la. A aplicação que usaremos é um simples hello-world escrito em Java que exibe uma mensagem quando o endpoint é acessado.
@@ -110,3 +113,6 @@ curl localhost:8080/api
 ```
 
 </details>
+
+---
+<p align="center"><a href="../aula01">Aula 1</a> | <a href="../aula02">Aula 2</a></p>
