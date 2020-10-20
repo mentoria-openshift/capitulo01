@@ -28,3 +28,7 @@ Com containers, você trata com imagens, que tem um set de instruções único. 
 Por conta das qualidades de reuso e de isolamento, é mais viável que cada aplicação ou recurso use seu próprio container ao invés da aproximação monolítica clássica, onde um único host executa a aplicação, suas bibliotecas, dependências, banco de dados, sistemas de arquivos e tudo mais. Esta abordagem não é recomendada quando se usa containers, pois a imagem acaba se tornando grande e complexa, e mais difícil de ser mantida. Por conta da flexibilidade oferecida por containers, é mais viável o uso de diversos containers executando em rede, comunicando-se entre si, cada um com seu próprio domínio - i.e., um container executando somente PostgreSQL, outro executando somente a aplicação backend, outro executando somente a aplicação frontend, e todos se comunicando e enviando chamadas um para os outros. 
 
 Desta forma, é possível aumentar recursos somente do que for necessário, eliminando a necessidade de aumentar o número de containers para tudo que a aplicação consome. A carga fica melhor distribuída, a aplicação mais ágil, e recursos de sistema são ecnomizados. Com esta abordagem, a construção de aplicações através da arquitetura de microsserviços fica mais facilitada, ágil e funcional.
+
+## Referências
+* [What is a Container?](https://www.docker.com/resources/what-container)
+* [Introdução aos contêineres e ao Docker](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/)
