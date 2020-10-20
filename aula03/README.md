@@ -1,5 +1,5 @@
 # Aula 3 - Linha de Comando Docker
-<center><a href="../aula02">❮ Aula anterior</a> | <a href="../aula04">Próxima aula ❯</a></center>
+<p align="center"><a href="../aula02">❮ Aula anterior</a> | <a href="../aula04">Próxima aula ❯</a></p>
 <br/>
 
 Nesta aula, aprenderemos alguns comandos para gerenciamento de imagens e containers com Docker e Podman. Ao completar esta aula, você saberá alterar tags, listar, remover, baixar e subir imagens usando o Docker ou o Podman. Você saberá também como executar, parar e remover containers existentes.
@@ -225,4 +225,4 @@ podman rm $(podman ps -aq)
 * [Documentação do comando images](https://docs.docker.com/engine/reference/commandline/images/)
 
 ---
-<center><a href="../aula02">❮ Aula anterior</a> | <a href="../aula04">Próxima aula ❯</a></center>
+<p align="center"><a href="../aula02">❮ Aula anterior</a> | <a href="../aula04">Próxima aula ❯</a></p>

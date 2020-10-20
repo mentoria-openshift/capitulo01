@@ -1,5 +1,5 @@
 # Aula 1 - O que são containers?
-<center><a href="../aula02">Próxima aula ❯</a></center>
+<p align="center"><a href="../aula02">Próxima aula ❯</a></p>
 <br/>
 Nesta aula, aprenderemos o básico de aplicações distribuídas em containers e containerização. Ao final desta aula, você deverá saber o que são containers e como eles funcionam. 
 
@@ -36,4 +36,4 @@ Desta forma, é possível aumentar recursos somente do que for necessário, elim
 * [Introdução aos contêineres e ao Docker](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/)
 
 ----
-<center><a href="../aula02">Próxima aula ❯</a></center>
+<p align="center"><a href="../aula02">Próxima aula ❯</a></p>
