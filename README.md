@@ -8,7 +8,7 @@ Este repositório contém as aulas referentes ao primeiro capítulo da mentoria 
 3. [Linha de comando Docker](aula03)
 4. Aula prática: [Skopeo e Buildah](aula04)
 5. [Templates com Docker Compose](aula05)
-6. Aula prática: [Criando aplicações multi-container com Docker](aula06)
+6. Aula prática: [Aplicações multi-container com Docker](aula06)
 
 # Apêndices
 * [Criando uma conta no Dockerhub](apendices/conta_dockerhub.md)

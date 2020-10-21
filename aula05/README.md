@@ -80,5 +80,11 @@ Semelhante ao comando `docker start`, o `docker-compose start` também inicia co
 podman-compose start
 ```
 
+## Referências
+* [Documentação do Docker Compose](https://docs.docker.com/compose)
+* [Documentação do Podman](http://docs.podman.io/en/latest/)
+* [API 3 do Docker Compose](https://docs.docker.com/compose/compose-file/compose-versioning/#version-3)
+* [Código do Podman Compose](https://github.com/containers/podman-compose)
+
 ---
 <p align="center"><a href="../aula04">❮ Aula anterior</a> | <a href="../aula06">Próxima aula ❯</a></p>
