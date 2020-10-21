@@ -54,7 +54,7 @@
     **c)** Um ambiente de tempo de execução onde um aplicativo será executado.
 
     **d)** O arquivo de índice do container usado por um registro.
-
+---
 
 <details> 
   <summary>Respostas</summary>
