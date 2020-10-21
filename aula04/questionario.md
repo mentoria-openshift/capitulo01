@@ -61,10 +61,10 @@
 <details> 
   <summary>Respostas</summary>
 
-    1. Resposta: c
+    1. Resposta: a
     2. Resposta: b
-    3. Resposta: c e d
-    4. Resposta: b, c, e
+    3. Resposta: c
+    4. Resposta: c
     5. Resposta: b
 </details>
 
