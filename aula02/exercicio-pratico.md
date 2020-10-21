@@ -12,7 +12,7 @@ Com o conteúdo que aprendemos neste capítulo, podemos criar uma imagem de cont
 - O sistema operacional base da imagem deverá ser o `maven:3.6.3-adoptopenjdk-11`
 - O nome do container também deve ser `simplecrud`.
 - A aplicação ficará disponível no endpoint `http://localhost:8080/api`.
-- O código da aplicação está disponível em `https://github.com/thaalesalves/simplecrud-spring`.
+- O código da aplicação está disponível em `https://github.com/mentoria-openshift/simplecrud-spring`.
 - Para compilar o código da aplicação, use o comando `mvn clean install`
 - Para executar a aplicação compilada, use `java -Dspring.profiles.active="$APP_PROFILE" -jar /opt/simplecrud-spring/target/simplecrud-0.0.1-SNAPSHOT.jar`
 
@@ -46,7 +46,7 @@ COPY [ "scripts/entrypoint.sh", "/entrypoint.sh" ]
 
 RUN apt update -y
 RUN apt install -y git
-RUN git clone https://github.com/thaalesalves/simplecrud-spring /opt/simplecrud
+RUN git clone https://github.com/mentoria-openshift/simplecrud-spring /opt/simplecrud
 
 WORKDIR /opt/simplecrud
 

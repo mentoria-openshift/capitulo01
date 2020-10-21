@@ -6,7 +6,7 @@ COPY [ "scripts/entrypoint.sh", "/entrypoint.sh" ]
 
 RUN apt update -y
 RUN apt install -y git
-RUN git clone https://github.com/thaalesalves/simplecrud-spring /opt/simplecrud
+RUN git clone https://github.com/mentoria-openshift/simplecrud-spring /opt/simplecrud
 
 WORKDIR /opt/simplecrud
 

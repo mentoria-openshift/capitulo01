@@ -57,7 +57,7 @@ buildah config --workingdir /opt $container_openjdk8
 # Instalando depências e executando comandos
 buildah run $container_openjdk8 /bin/bash -c 'yum update -y && \
     yum install -y wget tar java-11-openjdk-devel java-11-openjdk git && \
-    git clone https://github.com/thaalesalves/simplecrud-spring.git && \
+    git clone https://github.com/mentoria-openshift/simplecrud-spring.git && \
     wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz && \
     tar xvzf apache-maven-3.6.3-bin.tar.gz && \
     chmod -R +x $MAVEN_HOME/bin && \
