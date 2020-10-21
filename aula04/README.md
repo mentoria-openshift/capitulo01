@@ -144,6 +144,7 @@ Isso conclui nosso material sobre comandos de Docker, Podman, Skopeo e Buildah, 
 * [Podman](https://podman.io/)
 * [Buildah](https://buildah.io/)
 * [Documentação do Podman](http://docs.podman.io/en/latest/)
+* [Documentação do Buildah](https://github.com/containers/buildah/blob/master/docs)
 * [Usando o Buildah](https://www.redhat.com/sysadmin/building-buildah)
 * [Usando o Skopeo](https://www.redhat.com/pt-br/blog/skopeo-copy-rescue)
 
