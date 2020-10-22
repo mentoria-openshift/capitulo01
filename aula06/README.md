@@ -75,7 +75,7 @@ Para criar um container e imediatamente adicioná-lo à rede, usamos o flag `--n
 podman run -d --name meu_container --network minha_rede imagem:tag
 ```
 
-# Redes e Docker Compose
+## Redes e Docker Compose
 Além de fazermos tudo isso através da linha de comando, podemos também criar redes através de um template do Compose, e imediatamente incluir os containers nelas. O Compose permite que diversas redes sejam criadas, e que os containers recebam IPs ao serem adicionados a uma delas.
 
 Por padrão, quando executamos um template do Compose, uma rede chamada `myapp_default` é criada, e os containers sem rede definida são inseridos nela. Mas podemos especificar nossas próprias redes e drivers. 
