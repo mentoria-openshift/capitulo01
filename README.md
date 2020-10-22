@@ -1,4 +1,4 @@
-# Capítulo 1 - Containerização e Docker
+# Capítulo 1 - Introdução a containers, Docker e ferramentas de container
 Este repositório contém as aulas referentes ao primeiro capítulo da mentoria de OpenShift, e trata sobre a introdução de sistemas containerizados e Docker. Após completar este capítulo, você entenderá o que é um container, como ele funciona e como criar imagens de container para Docker, além de criar aplicações multi-container com Docker e preparar o deploy delas com um template feito em docker-compose.
 
 # Tópicos
