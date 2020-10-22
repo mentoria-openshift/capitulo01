@@ -26,3 +26,5 @@ services:
      - '8080:8080'
     networks:
      - simplecrud_net
+    depends_on:
+      - postgresql

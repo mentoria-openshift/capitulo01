@@ -18,6 +18,7 @@ Com o conteúdo que aprendemos nas aulas 5 e 6, podemos criar redes Docker e faz
 - As demais especificações da aplicação, como porta e imagem deverão ser iguais à do exercício da aula 2.
 - O nome do hostname da aplicação deverá ser `simplecrud`.
 - Teste seu resultado exibindo a lista de livros contida no banco de dados, através do endpoint `localhost:8080/api/get`.
+- Certifique-se que o container da aplicação tem o do banco de dados como dependência.
 
 ## Passo-a-passo
 <details> 

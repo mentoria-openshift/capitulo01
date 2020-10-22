@@ -132,7 +132,7 @@ services:
             - '8080:8080'
 ```
 
-Um exemplo de `docker-compose.yaml` completo com uma rede definida, com uma aplicação que se comunica com um banco de dados MySQL.
+Um exemplo de `docker-compose.yaml` completo com uma rede definida, com uma aplicação que se comunica com um banco de dados MySQL. Note que a aplicação tem o banco de dados como dependência. Isso serve para que a aplicação não suba sem o banco, o que pode ocasionar em erros.
 
 ```yaml
 version: '3'
@@ -163,6 +163,8 @@ services:
      - '9090:9090'
     networks:
      - rede_app
+    depends_on:
+      - mysql
 ```
 
 Isso conclui o capítulo 1 do curso com introdução a containers. No próximo capítulo, teremos uma introdução ao OpenShift e suas funcionalidades. Para praticar os assuntos estudados, faça o questionário e o exercício prático.
