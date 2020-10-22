@@ -17,7 +17,7 @@ Este repositório contém as aulas referentes ao primeiro capítulo da mentoria 
 * [Instalação das ferramentas de container](apendices/instalacao_container_tools.md) (somente Linux)
 
 # Capítulos
-1. [Containerização e Docker](https://github.com/mentoria-openshift/capitulo01)
+1. [Introdução a containers, Docker e ferramentas de container](https://github.com/mentoria-openshift/capitulo01)
 2. [Introdução ao OpenShift](https://github.com/mentoria-openshift/capitulo02)
 3. [Implantando aplicações containerizadas no OpenShift](https://github.com/mentoria-openshift/capitulo03)
 4. [Implantando aplicações no OpenShift com o Source to Image](https://github.com/mentoria-openshift/capitulo04)
