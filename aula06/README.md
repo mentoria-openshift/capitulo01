@@ -97,6 +97,13 @@ networks:
         driver: host
 ```
 
+Podemos também declarar uma rede única sem declarar tipo de driver usando um mapa da sintaxe do YAML.
+
+```yaml
+networks:
+    ? minha_rede
+```
+
 Também é possível alterar caractéristicas da rede padrão, e até mesmo usar redes já existentes e não gerenciadas pelo Compose. Para alterar a rede padrão, basta especificar o nome da rede como `default`, e a rede padrão acatará as definições fornecidas.
 
 ```yaml
@@ -125,7 +132,7 @@ services:
             - '8080:8080'
 ```
 
-Um exemplo de `docker-compose.yaml` completo com uma rede definida.
+Um exemplo de `docker-compose.yaml` completo com uma rede definida, com uma aplicação que se comunica com um banco de dados MySQL.
 
 ```yaml
 version: '3'
@@ -134,16 +141,16 @@ networks:
     name: rede_app
 
 services:
-  postgresql:
-    container_name: postgresql
-    image: docker.io/postgres:10
-    hostname: postgresql
+  mysql:
+    container_name: mysql
+    image: docker.io/mysql:8
+    hostname: mysql
     ports:
-     - '5432:5432'
+     - '3306:3306'
     environment:
-     - POSTGRES_USER=usuario
-     - POSTGRES_PASSWORD=senha
-     - POSTGRES_DATABASE=banco
+     - MYSQL_USER=usuario
+     - MYSQL_PASSWORD=senha
+     - MYSQL_DATABASE=banco
     networks:
      - rede_app
 

@@ -1,0 +1,28 @@
+version: '3'
+networks:
+  ? simplecrud_net
+
+services:
+  postgresql:
+    container_name: postgresql
+    image: docker.io/postgres:10
+    hostname: postgresql
+    ports:
+     - '5432:5432'
+    environment:
+     - POSTGRES_USER=simplecrud
+     - POSTGRES_PASSWORD=simplecrud
+     - POSTGRES_DATABASE=simplecrud
+    networks:
+     - simplecrud_net
+
+  simplecrud:
+    container_name: simplecrud
+    image: simplecrud:1.0
+    hostname: simplecrud
+    environment:
+      - APP_PROFILE=pt
+    ports:
+     - '8080:8080'
+    networks:
+     - simplecrud_net
