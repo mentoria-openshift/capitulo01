@@ -1,4 +1,4 @@
-<p align="center"><a href="../aula05">❮ Aula anterior</a> | <a href="/capítulo02">Próximo capítulo ❯</a></p>
+<p align="center"><a href="../aula05">❮ Aula anterior</a> | <a href="https://github.com/mentoria-openshift/capitulo02">Próximo capítulo ❯</a></p>
 <br/>
 
 # Aula 6 - Aplicações multi-container com Docker
@@ -194,4 +194,4 @@ Isso conclui nosso material sobre Docker Compose e aplicações multi-container 
 * [Plugins de rede](https://docs.docker.com/engine/extend/plugins_services)
 
 ---
-<p align="center"><a href="../aula05">❮ Aula anterior</a> | <a href="/capítulo02">Próximo capítulo ❯</a></p>
+<p align="center"><a href="../aula05">❮ Aula anterior</a> | <a href="https://github.com/mentoria-openshift/capitulo02">Próximo capítulo ❯</a></p>
