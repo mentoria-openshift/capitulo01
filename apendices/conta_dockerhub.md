@@ -1,1 +1,0 @@
-# Apêndice: Criando uma conta no Dockerhub
