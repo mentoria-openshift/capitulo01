@@ -3,7 +3,7 @@
 
 # Exercício prático - Aulas 3 e 4
 
-Com o conteúdo que aprendemos nas aulas 3 e 4, podemos criar imagens de forma mais flexível e subi-la para um repositório usando o Buildah e o Skopeo, além de comandos mais avançados do Docker. Ao final deste exercício, você terá compilado sua imagem com o Buildah e a subido para sua conta do Dockerhub. 
+Com o conteúdo que aprendemos nas aulas 3 e 4, podemos criar imagens de forma mais flexível e subi-la para um repositório usando o Buildah e o Skopeo, além de comandos mais avançados do Docker. Ao final deste exercício, você terá compilado sua imagem com o Buildah e a subido para sua conta do Quay.io. 
 
 **NOTA:** este exercício usa Buildah e Skopeo, que estão disponíveis apenas para Linux. Se você usa Windows ou mac, precisará de uma máquina virtual com Linux para fazê-lo.
 
@@ -12,7 +12,7 @@ Com o conteúdo que aprendemos nas aulas 3 e 4, podemos criar imagens de forma m
 - Os comandos deverão ser adicionados num arquivo chamado `simplecrud-imagem.sh`.
 - O arquivo `simplecrud-imagem.sh` deverá estar na mesma pasta do Dockerfile do exercício anterior.
 - Sua imagem de container deve se chamar `simplecrud`, e deverá ter a tag `2.0`.
-- Sua imagem deverá ser copiada para sua conta do Dockerhub com o Skopeo, usando o nome `simplecrud-skopeo:1.0`.
+- Sua imagem deverá ser copiada para sua conta do Quay.io com o Skopeo, usando o nome `simplecrud-skopeo:1.0`.
 
 ## Passo-a-passo
 Este passo a passo indica como chegar ao resultado final do exercício. Clique na seta ao lado do enunciado para exibir a resposta. Note que o exercício todo será feito na linha de comando.
@@ -79,7 +79,7 @@ buildah commit $simplecrud simplecrud:2.0
 </details>
 
 <details> 
-  <summary>5. Execute o script, copie a imagem para o Dockerhub com o Skopeo</summary>
+  <summary>5. Execute o script, copie a imagem para o Quay.io com o Skopeo</summary>
    
 ```bash
 # Executando o script
@@ -89,7 +89,7 @@ sh simplecrud-imagem.sh
 skopeo login -u seu_usuario docker.io
 
 # Copiando a imagem
-skopeo copy containers-storage:localhost/simplecrud:2.0 docker://docker.io/seu_usuario/simplecrud-skopeo:1.0
+skopeo copy containers-storage:localhost/simplecrud:2.0 docker://quay.io/seu_usuario/simplecrud-skopeo:1.0
 ```
 
 </details>
