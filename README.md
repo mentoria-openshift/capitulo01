@@ -3,11 +3,11 @@ Este repositório contém as aulas referentes ao primeiro capítulo da mentoria 
 
 # Tópicos
 ## Introdução a Containers
-1. [O que são containers?](aula01)
+1. Aula teórica: [O que são containers?](aula01)
 2. Aula prática: [Entendendo o Dockerfile](aula02)
-3. [Linha de comando Docker](aula03)
+3. Aula teórica: [Linha de comando Docker](aula03)
 4. Aula prática: [Skopeo e Buildah](aula04)
-5. [Templates com Docker Compose](aula05)
+5. Aula teórica: [Templates com Docker Compose](aula05)
 6. Aula prática: [Aplicações multi-container com Docker](aula06)
 
 # Apêndices
